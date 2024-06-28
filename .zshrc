@@ -121,3 +121,14 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 # Fuzzy finder for terminal (NOT WORKING)
 # source <(fzf --zsh)%
+
+
+# Asus Power Modes.
+alias turbo='echo 1 | sudo tee /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy; echo "Laptop => Turbo Mode - Fan upto (5800 RPM)
+Check RPM - watch -n 0 sensors"'
+
+alias balance='echo 0 | sudo tee /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy; echo "Laptop => Balance Mode - Fan upto (4400 RPM)
+Check RPM - watch -n 0 sensors"'
+
+alias silent='echo 2 | sudo tee /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy; echo "Laptop => Silent Mode - Fan upto (2800 RPM)
+Check RPM - watch -n 0 sensors"'
