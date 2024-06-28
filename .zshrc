@@ -132,3 +132,21 @@ Check RPM - watch -n 0 sensors"'
 
 alias silent='echo 2 | sudo tee /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy; echo "Laptop => Silent Mode - Fan upto (2800 RPM)
 Check RPM - watch -n 0 sensors"'
+
+which_mode() {
+    mode=$(cat /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy)
+    case $mode in
+        0)
+            echo "Balance"
+            ;;
+        1)
+            echo "Laptop"
+            ;;
+        2)
+            echo "Laptop"
+            ;;
+        *)
+            echo "Unknown Mode - This is not specified by the user check and see if any problem occurs."
+            ;;
+    esac
+}
