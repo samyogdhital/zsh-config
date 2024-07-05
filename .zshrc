@@ -140,10 +140,10 @@ which_mode() {
             echo "Balance"
             ;;
         1)
-            echo "Laptop"
+            echo "Turbo"
             ;;
         2)
-            echo "Laptop"
+            echo "Silent"
             ;;
         *)
             echo "Unknown Mode - This is not specified by the user check and see if any problem occurs."
