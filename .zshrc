@@ -150,3 +150,6 @@ which_mode() {
             ;;
     esac
 }
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
